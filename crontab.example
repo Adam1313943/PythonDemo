@@ -1,0 +1,12 @@
+# Let's Encrypt 憑證自動更新 - Crontab 範例
+# 如果您的系統沒有使用 systemd，可以使用這個 crontab 設定
+
+# 每天凌晨 2:00 和下午 2:00 執行憑證更新檢查
+0 2,14 * * * /usr/bin/python3 /opt/cert-renewal/cert_renewal.py --config /opt/cert-renewal/config.json >> /var/log/cert-renewal/cron.log 2>&1
+
+# 或者每週一凌晨 3:00 執行
+# 0 3 * * 1 /usr/bin/python3 /opt/cert-renewal/cert_renewal.py --config /opt/cert-renewal/config.json >> /var/log/cert-renewal/cron.log 2>&1
+
+# 安裝方式:
+# sudo crontab -e
+# 然後將上面的行加入 crontab

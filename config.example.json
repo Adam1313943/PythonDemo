@@ -1,0 +1,30 @@
+{
+  "domains": [
+    "example.com",
+    "www.example.com",
+    "api.example.com"
+  ],
+  "renewal_threshold_days": 30,
+  "log_directory": "/var/log/cert-renewal",
+  "log_level": "INFO",
+  "certbot_args": [
+    "--quiet",
+    "--no-self-upgrade"
+  ],
+  "reload_services": [
+    "nginx",
+    "apache2"
+  ],
+  "email_notifications": {
+    "enabled": true,
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "username": "your-email@gmail.com",
+    "password": "your-app-password",
+    "from_addr": "your-email@gmail.com",
+    "to_addrs": [
+      "admin@example.com",
+      "ops@example.com"
+    ]
+  }
+}

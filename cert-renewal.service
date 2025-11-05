@@ -1,0 +1,24 @@
+[Unit]
+Description=Let's Encrypt Certificate Auto-Renewal
+Documentation=https://github.com/yourusername/PythonDemo
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/opt/cert-renewal
+ExecStart=/usr/bin/python3 /opt/cert-renewal/cert_renewal.py --config /opt/cert-renewal/config.json
+StandardOutput=journal
+StandardError=journal
+
+# 安全性設定
+NoNewPrivileges=true
+PrivateTmp=true
+
+# 資源限制
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target

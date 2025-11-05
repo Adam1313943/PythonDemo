@@ -1,0 +1,23 @@
+# Let's Encrypt 憑證自動更新工具依賴套件
+
+# Certbot - Let's Encrypt 官方客戶端
+certbot>=2.0.0
+
+# 根據您使用的網頁伺服器選擇對應的插件:
+
+# Nginx 插件
+certbot-nginx>=2.0.0
+
+# Apache 插件
+# certbot-apache>=2.0.0
+
+# DNS 插件 (用於 wildcard 憑證)
+# certbot-dns-cloudflare>=2.0.0
+# certbot-dns-route53>=2.0.0
+# certbot-dns-google>=2.0.0
+
+# 其他依賴 (Python 標準庫已包含，無需額外安裝)
+# - smtplib (電子郵件通知)
+# - logging (日誌記錄)
+# - json (設定檔處理)
+# - subprocess (執行系統命令)

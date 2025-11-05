@@ -1,0 +1,18 @@
+[Unit]
+Description=Let's Encrypt Certificate Auto-Renewal Timer
+Documentation=https://github.com/yourusername/PythonDemo
+Requires=cert-renewal.service
+
+[Timer]
+# 每天執行兩次 (凌晨 2:00 和下午 2:00)
+OnCalendar=*-*-* 02:00:00
+OnCalendar=*-*-* 14:00:00
+
+# 如果錯過執行時間，立即執行
+Persistent=true
+
+# 隨機延遲 0-3600 秒，避免所有伺服器同時更新
+RandomizedDelaySec=3600
+
+[Install]
+WantedBy=timers.target
