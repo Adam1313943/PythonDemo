@@ -2,6 +2,24 @@
 
 一個用 Python 編寫的 Let's Encrypt SSL/TLS 憑證自動更新工具，支援多網域管理、電子郵件通知和自動服務重載。
 
+## 📦 版本選擇
+
+本專案提供兩個版本:
+
+1. **標準版** (適用於 Linux 伺服器)
+   - 適用於 VPS、雲端主機、Linux 伺服器
+   - 支援 Nginx、Apache 等標準網頁伺服器
+   - 使用 systemd 或 crontab 排程
+   - 👉 請繼續閱讀本文件
+
+2. **XAMPP 版** (適用於 XAMPP 環境)
+   - 適用於 Windows、Linux、macOS 的 XAMPP 環境
+   - 專為 WordPress 開發者設計
+   - 自動處理 XAMPP Apache 設定
+   - 👉 請參閱 [README_XAMPP.md](README_XAMPP.md)
+
+---
+
 ## 功能特色
 
 - ✅ **自動憑證更新**: 自動檢測憑證到期時間並進行更新

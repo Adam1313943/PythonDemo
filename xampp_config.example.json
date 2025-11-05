@@ -1,0 +1,28 @@
+{
+  "domains": [
+    "yourdomain.com",
+    "www.yourdomain.com"
+  ],
+  "renewal_threshold_days": 30,
+  "log_directory": "./logs",
+  "log_level": "INFO",
+  "xampp_path": "",
+  "win_acme_path": "C:\\Tools\\win-acme\\wacs.exe",
+  "cert_base_path": "",
+  "email_notifications": {
+    "enabled": false,
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "username": "your-email@gmail.com",
+    "password": "your-app-password",
+    "from_addr": "your-email@gmail.com",
+    "to_addrs": [
+      "admin@yourdomain.com"
+    ]
+  },
+  "comments": {
+    "xampp_path": "留空則自動偵測。Windows 通常是 C:\\xampp，Linux 是 /opt/lampp",
+    "win_acme_path": "僅 Windows 需要。下載位置: https://github.com/win-acme/win-acme/releases",
+    "cert_base_path": "留空則使用預設路徑。Windows: C:\\ProgramData\\letsencrypt-win-simple，Linux: /etc/letsencrypt/live"
+  }
+}
